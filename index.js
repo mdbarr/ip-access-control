@@ -2,8 +2,8 @@
 
 const CIDRMatcher = require('cidr-matcher');
 
-function IPAccessControl({
-  allow = [], deny = [], order = 'deny, allow'
+function IPAccessControl ({
+  allow = [], deny = [], order = 'deny, allow',
 }) {
   if (!Array.isArray(allow)) {
     allow = [ allow ];
@@ -15,15 +15,11 @@ function IPAccessControl({
 
   const allowMatcher = new CIDRMatcher(allow);
 
-  const allowed = (ip) => {
-    return allowMatcher.contains(ip);
-  };
+  const allowed = (ip) => allowMatcher.contains(ip);
 
   const denyMatcher = new CIDRMatcher(deny);
 
-  const denied = (ip) => {
-    return denyMatcher.contains(ip);
-  };
+  const denied = (ip) => denyMatcher.contains(ip);
 
   this.check = function(ip) {
     if (order === 'allow, deny') {
