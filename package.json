@@ -1,5 +1,5 @@
 {
-  "name": "@mdbarr/ip-access-control",
+  "name": "@metastack/ip-access-control",
   "version": "0.2.0",
   "description": "Allow, Deny style access control for IP access validation",
   "main": "index.js",
