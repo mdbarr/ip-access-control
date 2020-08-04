@@ -4,16 +4,16 @@ Allow, Deny style access control for IP access validation.
 ## Installation
 ```bash
 # NPM
-npm install --save @mdbarr/ip-access-control
+npm install --save @hyperingenuity/ip-access-control
 
 # Yarn
-yarn add @mdbarr/ip-access-control
+yarn add @hyperingenuity/ip-access-control
 ```
 
 ## Usage
 To create an access control validator for a given scheme:
 ```javascript
-const IPAccessControl = require('@mdbarr/ip-access-control');
+const IPAccessControl = require('@hyperingenuity/ip-access-control');
 
 const accessValidator = new IPAccessControl({
   order: 'deny, allow',
